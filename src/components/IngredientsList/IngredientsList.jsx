@@ -5,7 +5,7 @@ const IngredientsList = (props) => {
 
         <ul>
             {props.ingredients.map((ingredient, index) => {
-                return <li key={index} style={{backgroundColor: ingredient.color}}>
+                return <li key={index} style={{ backgroundColor: ingredient.color }}>
                     {ingredient.name}
                     <button onClick={() => props.onAddToStack(ingredient)}>Add</button>
                 </li>

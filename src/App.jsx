@@ -6,8 +6,8 @@ import BurgerStack from './components/BurgerStack/BurgerStack';
 
 const App = () => {
 
-  
-  
+
+
   const availableIngredients = [
     { name: 'Kaiser Bun', color: 'saddlebrown' },
     { name: 'Sesame Bun', color: 'sandybrown' },
@@ -21,8 +21,10 @@ const App = () => {
     { name: 'Lettuce', color: 'lawngreen' },
     { name: 'Pickles', color: 'green' },
     { name: 'MacSauce', color: 'khaki' },
+    { name: 'Mayonaise', color: 'white' },
     { name: 'Tomato', color: 'tomato' },
     { name: 'Bacon', color: 'maroon' },
+    { name: 'Fried Egg', color: 'ivory' },
     { name: 'Onion', color: 'lightyellow' },
     { name: 'Cheddar Cheese', color: '#FDE18B' },
     { name: 'American Cheese', color: 'yellow' },
@@ -36,13 +38,13 @@ const App = () => {
   const removeFromStack = (ingredient) => {
     setStack((oldStack) => oldStack.filter((item) => item !== ingredient))
   }
-  
+
   return (
     <main>
       <h1>Burger Stacker</h1>
       <section>
-        <IngredientsList ingredients={availableIngredients} onAddToStack={addToStack}/>
-        <BurgerStack stack={stack} onRemoveFromStack={removeFromStack}/>
+        <IngredientsList ingredients={availableIngredients} onAddToStack={addToStack} />
+        <BurgerStack stack={stack} onRemoveFromStack={removeFromStack} />
       </section>
     </main>
   );
